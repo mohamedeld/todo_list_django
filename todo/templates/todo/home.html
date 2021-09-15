@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Cover CSS -->
+		<link rel="stylesheet" href="{% static 'todo/cover.css' %}" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+
+		<!-- FontAwesome5 -->
+		<script
+			src="https://kit.fontawesome.com/fc13a4496b.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="icon" type="image/png" href="{% static 'todo/Logo.png' %}" />
+		<title>Todo Woo</title>
+	</head>
+	<body>
+		<div class="cover-container-background"></div>
+		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+			<header class="masthead mb-auto">
+				<div class="inner">
+					<h3 class="masthead-brand">
+						<i class="far fa-check-circle"></i>Todo Woo
+					</h3>
+					<nav class="nav nav-masthead justify-content-center">
+						<a
+							class="nav-link active"
+							href="{% url 'todo:currenttodos' %}"
+							>View Todo's</a
+						>
+						<a class="nav-link" href="{% url 'todo:loginuser' %}"
+							>Login</a
+						>
+						<a class="nav-link" href="{% url 'todo:signupuser' %}"
+							>Sign Up</a
+						>
+					</nav>
+				</div>
+			</header>
+			<main
+				role="main"
+				class="inner cover justify-content-center align-items-center text-center"
+			>
+				<h1 class="cover-heading">Simplify Your Todos. Woo!</h1>
+				<br />
+				<p class="lead">
+					Life is fun. But life is also busy. There are a million
+					different things you could be doing, but what matters is
+					<u>what</u> you do. We created <b><i>Todo Woo</i></b> to
+					help you make sense of all of your opportunities. Your new
+					organized life awaits.
+				</p>
+				<br />
+				<p class="lead">
+					<a
+						id="ctaButton"
+						role="button"
+						class="btn btn-lg btn-dark"
+						href="{% url 'todo:signupuser' %}"
+						>Get Started</a
+					>
+				</p>
+			</main>
+
+			<footer class="mastfoot mt-auto">
+				<div class="inner">
+					<p class="col-md-6 float-left" style="color: white;">
+						Made with <i class="fab fa-python"></i> ,
+						<i class="fab fa-bootstrap"></i> and Django.
+					</p>
+					<p class="col-md-6 float-right">
+						Photo by JESHOOTS.COM on Unsplash
+					</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
